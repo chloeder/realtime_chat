@@ -4,6 +4,7 @@ import authRoutes from "./routes/auth.js";
 import connectDB from "./db/mongodb.js";
 const app = express();
 
+app.use(express.json());
 app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
